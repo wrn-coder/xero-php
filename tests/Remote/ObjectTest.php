@@ -88,4 +88,21 @@ class SimpleObject extends Object
         $this->_data['test'] = $test;
     }
 
+    /**
+     * Get the root node name for sending XML/json
+     *
+     * @return string
+     */
+    public static function getRootNodeName() {
+        return 'test';
+    }
+
+    /**
+     * Get the API to use for the object
+     *
+     * @return string
+     */
+    public static function getAPIStem() {
+        return 'test';
+    }
 }
