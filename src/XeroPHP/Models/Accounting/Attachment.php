@@ -1,5 +1,5 @@
 <?php
-//This class is a pseudo-model to represent an attachment.  Can't be directly put ot fetched.
+//This class is a pseudo-model to represent an attachment.  Can't be directly put or fetched.
 
 
 namespace XeroPHP\Models\Accounting;
@@ -47,7 +47,7 @@ class Attachment extends Object {
      *
      * @return string
      */
-    static function getGUIDProperty() {
+    public static function getGUIDProperty() {
         return 'AttachmentID';
     }
 
@@ -56,7 +56,7 @@ class Attachment extends Object {
      *
      * @return array
      */
-    static function getProperties() {
+    public static function getProperties() {
         return array(
             'AttachmentID' => array(false, self::PROPERTY_TYPE_STRING, null, false, false),
             'FileName' => array(true, self::PROPERTY_TYPE_STRING, null, false, false),
@@ -71,7 +71,7 @@ class Attachment extends Object {
      *
      * @return array
      */
-    static function getSupportedMethods() {
+    public static function getSupportedMethods() {
         return array(
             Request::METHOD_GET,
             Request::METHOD_PUT,
@@ -84,7 +84,7 @@ class Attachment extends Object {
      *
      * @return string
      */
-    static function getResourceURI() {
+    public static function getResourceURI() {
         return '';
     }
 
@@ -145,7 +145,7 @@ class Attachment extends Object {
                 while(!feof($this->local_handle)){
                     $this->content .= fread($this->local_handle, 8192);
                 }
-            //Otherwise, if it can be fetched
+                //Otherwise, if it can be fetched
             } elseif(isset($this->_data['Url'])){
                 $this->content = self::downloadContent($this->_application, $this->_data['Url']);
             }
@@ -225,4 +225,19 @@ class Attachment extends Object {
         return false;
     }
 
+    /**
+     * Get the root node name for sending XML/json
+     *
+     * @return string
+     */
+    public static function getRootNodeName() {
+        // TODO: Implement getRootNodeName() method.
+    }
+
+    /**
+     * @return string
+     */
+    public static function getAPIStem() {
+        // TODO: Implement getAPIStem() method.
+    }
 }

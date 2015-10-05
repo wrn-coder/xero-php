@@ -15,8 +15,7 @@ class Helpers {
      * in which case, the parent key is singularised and used.
      *
      * @param array $array
-     * @param int $depth
-     * @param string $singular_parent_key
+     * @param null $key_override
      * @return string
      */
     public static function arrayToXML(array $array, $key_override = null) {
@@ -61,6 +60,7 @@ class Helpers {
         $singular_node_name = self::singularize($sxml->getName());
 
         foreach($sxml->children() as $child_name => $child) {
+            /** @var \SimpleXMLElement $child */
             if($child->count() > 0) {
                 $node = self::XMLToArray($child);
             } else {

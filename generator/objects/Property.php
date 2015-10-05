@@ -1,5 +1,8 @@
 <?php
 
+namespace Calcinai\XeroPHP\Generator;
+
+use XeroPHP\Helpers;
 use XeroPHP\Remote\Object;
 
 class Property {
@@ -68,7 +71,7 @@ class Property {
      * @return string
      */
     public function getNameSingular(){
-        return \XeroPHP\Helpers::singularize($this->getName());
+        return Helpers::singularize($this->getName());
     }
 
     /**
@@ -147,7 +150,7 @@ class Property {
 
     public function getTypeConstant(){
         //Ew.
-        $rc = new ReflectionClass('\\XeroPHP\\Remote\\Object');
+        $rc = new \ReflectionClass('\\XeroPHP\\Remote\\Object');
         foreach($rc->getConstants() as $constant_name => $constant_value)
             if($constant_value === $this->getType())
                 return $constant_name;
@@ -157,6 +160,7 @@ class Property {
     }
 
     /**
+     * @param bool $with_ns
      * @return string
      */
     public function getPHPType($with_ns = false) {
@@ -215,33 +219,33 @@ class Property {
     private function parseType(){
 
         //Spelling errors in the docs
-        if(preg_match('/^((a\s)?bool|true\b|booelan)/i', $this->description))
+        if(1 === preg_match('/^((a\s)?bool|true\b|booelan)/i', $this->description))
             $type = Object::PROPERTY_TYPE_BOOLEAN;
 
         //Spelling errors in the docs
-        if(preg_match('/UTC$/', $this->getName()))
+        if(1 === preg_match('/UTC$/', $this->getName()))
             $type = Object::PROPERTY_TYPE_TIMESTAMP;
 
-        if(preg_match('/^Has[A-Z]\w+/', $this->getName()))
+        if(1 === preg_match('/^Has[A-Z]\w+/', $this->getName()))
             $type = Object::PROPERTY_TYPE_BOOLEAN;
 
-        if(preg_match('/(^sum\b|decimal|the\stotal|total\s(of|tax)|rate\b|amount\b)/i', $this->description)){
+        if(1 === preg_match('/(^sum\b|decimal|the\stotal|total\s(of|tax)|rate\b|amount\b)/i', $this->description)){
             //If not the name of the field itself and not an 'amount type'
             if(stripos($this->name, 'name') === false && stripos($this->description, 'amount type') === false){
                 $type = Object::PROPERTY_TYPE_FLOAT;
             }
         }
 
-        if(preg_match('/(alpha numeric)/i', $this->description))
+        if(1 === preg_match('/(alpha numeric)/i', $this->description))
             $type = Object::PROPERTY_TYPE_STRING;
 
-        if(preg_match('/(^int(eger)?\b)/i', $this->description))
+        if(1 === preg_match('/(^int(eger)?\b)/i', $this->description))
             $type = Object::PROPERTY_TYPE_INT;
 
-        if(preg_match('/(\bdate\b)/i', $this->description))
+        if(1 === preg_match('/(\bdate\b)/i', $this->description))
             $type = Object::PROPERTY_TYPE_DATE;
 
-        if(preg_match('/Xero (generated )?(unique )?identifier/i', $this->description))
+        if(1 === preg_match('/Xero (generated )?(unique )?identifier/i', $this->description))
             $type = Object::PROPERTY_TYPE_GUID;
 
         if($this->getModel()->getClassName().'ID' == $this->getName()){
@@ -249,7 +253,7 @@ class Property {
             $this->getModel()->setGUIDProperty($this);
         }
 
-        if(preg_match('/(Code|ID)$/', $this->getName()))
+        if(1 === preg_match('/(Code|ID)$/', $this->getName()))
             $type = Object::PROPERTY_TYPE_STRING;
 
         $result = null;
@@ -258,7 +262,7 @@ class Property {
             //The ns hint for searching, look for subclasses of this first.
             $ns_hint = sprintf('%s\\%s', $this->getModel()->getNamespace(), $this->getModel()->getClassName());
 
-            if(preg_match('/see\s(?<model>[^.]+)/i', $this->getDescription(), $matches)){
+            if(1 === preg_match('/see\s(?<model>[^.]+)/i', $this->getDescription(), $matches)){
 
                 //Try NS'ing it with existing models... MNA htis is getting ugly.
                 foreach($this->getModel()->getAPI()->getModels() as $model){
@@ -299,14 +303,14 @@ class Property {
 
             //Otherwise, just have a stab again, this needs to be after other references
             if($result === null){
-                if(preg_match('/see\s(?<model>[^.]+)/i', $this->getDescription(), $matches)){
+                if(1 === preg_match('/see\s(?<model>[^.]+)/i', $this->getDescription(), $matches)){
                     $result = $this->getModel()->getAPI()->searchByKey(str_replace(' ', '', ucwords($matches['model'])), $ns_hint);
                 }
             }
 
             //Look for pointy bracketed references
             if($result === null){
-                if(preg_match('/<(?<model>[^>]+)>/i', $this->getDescription(), $matches)){
+                if(1 === preg_match('/<(?<model>[^>]+)>/i', $this->getDescription(), $matches)){
                     $result = $this->getModel()->getAPI()->searchByKey(str_replace(' ', '', ucwords($matches['model'])), $ns_hint);
                 }
             }
@@ -314,7 +318,7 @@ class Property {
 
             //I have tried very hard to avoid special cases!
             if($result === null){
-                if(preg_match('/^(?<model>Purchase|Sale)s?Details/i', $this->getName(), $matches)){
+                if(1 === preg_match('/^(?<model>Purchase|Sale)s?Details/i', $this->getName(), $matches)){
                     $result = $this->getModel()->getAPI()->searchByKey($matches['model'], $ns_hint);
                 }
             }

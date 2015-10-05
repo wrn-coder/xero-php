@@ -276,7 +276,7 @@ abstract class Object implements ObjectInterface, \JsonSerializable, \ArrayAcces
 
             case self::PROPERTY_TYPE_BOOLEAN:
                 return in_array(strtolower($value), array('true', '1', 'yes'));
-
+            /** @noinspection PhpMissingBreakStatementInspection */
             case self::PROPERTY_TYPE_TIMESTAMP:
                 $timezone = new \DateTimeZone('UTC');
             case self::PROPERTY_TYPE_DATE:

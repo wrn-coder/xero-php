@@ -11,29 +11,43 @@ interface ObjectInterface {
      *
      * @return string|null
      */
-    static function getGUIDProperty();
+    public static function getGUIDProperty();
 
     /**
      * Get a list of properties
      *
      * @return array
      */
-    static function getProperties();
+    public static function getProperties();
+
+    /**
+     * Get the root node name for sending XML/json
+     *
+     * @return string
+     */
+    public static function getRootNodeName();
+
+    /**
+     * Get the API to use for the object
+     *
+     * @return string
+     */
+    public static function getAPIStem();
 
     /**
      * Get a list of the supported HTTP Methods
      *
      * @return array
      */
-    static function getSupportedMethods();
+    public static function getSupportedMethods();
 
     /**
      * return the URI of the resource (if any)
      *
      * @return string
      */
-    static function getResourceURI();
+    public static function getResourceURI();
 
-    static function isPageable();
+    public static function isPageable();
 
 }

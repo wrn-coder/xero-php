@@ -2,6 +2,7 @@
 
 namespace XeroPHP;
 
+use XeroPHP\Remote\Exception\NotFoundException;
 use XeroPHP\Remote\OAuth\Client;
 use XeroPHP\Remote\Object;
 use XeroPHP\Remote\Query;
@@ -10,24 +11,26 @@ use XeroPHP\Remote\URL;
 
 abstract class Application {
 
-    protected static $_config_defaults = array(
-        'xero'  => array(
+    protected static $_type_config_defaults = [];
+
+    protected static $_config_defaults = [
+        'xero'  => [
             'site'            => 'https://api.xero.com',
             'base_url'        => 'https://api.xero.com',
             'core_version'    => '2.0',
             'payroll_version' => '1.0',
             'file_version'    => '1.0',
             'model_namespace' => '\\XeroPHP\\Models'
-        ),
+        ],
         //OAuth config
-        'oauth' => array(
+        'oauth' => [
             'signature_method'   => Client::SIGNATURE_RSA_SHA1,
             'signature_location' => Client::SIGN_LOCATION_HEADER,
             'authorize_url'      => 'https://api.xero.com/oauth/Authorize',
             'request_token_path' => 'oauth/RequestToken',
             'access_token_path'  => 'oauth/AccessToken'
-        ),
-        'curl'  => array(
+        ],
+        'curl'  => [
             CURLOPT_USERAGENT      => 'XeroPHP',
             CURLOPT_CONNECTTIMEOUT => 30,
             CURLOPT_TIMEOUT        => 20,
@@ -37,8 +40,8 @@ abstract class Application {
             CURLOPT_PROXY          => false,
             CURLOPT_PROXYUSERPWD   => false,
             CURLOPT_ENCODING       => '',
-        )
-    );
+        ]
+    ];
 
     /**
      * @var array
@@ -73,7 +76,7 @@ abstract class Application {
      */
     public function getAuthorizeURL($oAuthToken = null) {
         $authorizeUrl = $this->oauth_client->getAuthorizeURL();
-        if ($oAuthToken) {
+        if ($oAuthToken !== null) {
             return sprintf('%s?oauth_token=%s', $authorizeUrl, $oAuthToken);
         }
 
@@ -125,6 +128,7 @@ abstract class Application {
      */
     public function loadByGUID($model, $guid) {
 
+        /** @var Remote\Object $class */
         $class = $this->validateModelClass($model);
 
         $uri = sprintf('%s/%s', $class::getResourceURI(), $guid);
@@ -136,11 +140,14 @@ abstract class Application {
 
         //Return the first (if any) element from the response.
         foreach($request->getResponse()->getElements() as $element){
+            /** @var Remote\Object $object */
             $object = new $class($this);
             $object->fromStringArray($element);
             return $object;
         }
 
+        //Shouldn't be able to get here since the request should throw it.
+        throw new NotFoundException();
     }
 
 
@@ -158,7 +165,7 @@ abstract class Application {
 
     /**
      * @param Remote\Object $object
-     * @return null
+     * @return null|Remote\Response
      * @throws Exception
      */
     public function save(Object $object) {
@@ -201,11 +208,13 @@ abstract class Application {
             return $response;
 
         }
+
+        return null;
     }
 
 
     /**
-     * @param array $objects
+     * @param Remote\Object[] $objects
      * @return null
      * @throws Exception
      */
@@ -213,6 +222,7 @@ abstract class Application {
 
         //Just get one type to compare with, doesn't matter which.
         $current_object = current($objects);
+        /** @var Remote\ObjectInterface $type */
         $type = get_class($current_object);
         $has_guid =  $current_object->hasGUID();
         $object_arrays = array();
@@ -261,20 +271,22 @@ abstract class Application {
      *
      * This is called automatically from the save method for things like adding contacts to ContactGroups
      *
-     * @param Object $object
+     * @param Remote\Object $object
      * @throws Exception
      */
     private function savePropertiesDirectly(Object $object){
         foreach($object::getProperties() as $property_name => $meta){
-            if($meta[Object::KEY_SAVE_DIRECTLY] && $object->isPropertyDirty($property_name)){
+            if($meta[Object::KEY_SAVE_DIRECTLY] && $object->isDirty($property_name)){
                 //Then actually save
                 $property_objects = $object->$property_name;
+                /** @var Remote\ObjectInterface $property_type */
                 $property_type = get_class(current($property_objects));
 
                 $url = new URL($this, sprintf('%s/%s/%s', $object::getResourceURI(), $object->getGUID(), $property_type::getResourceURI()));
                 $request = new Request($this, $url, Request::METHOD_PUT);
 
                 $property_array = array();
+                /** @var Remote\Object[] $property_objects */
                 foreach($property_objects as $property_object){
                     $property_array[] = $property_object->toStringArray();
                 }
@@ -303,7 +315,7 @@ abstract class Application {
      * @param Remote\Object $object
      */
     public function delete(Object $object) {
-
+        //todo - Implement delete on objects that support it
     }
 
 }

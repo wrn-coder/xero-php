@@ -1,5 +1,7 @@
 <?php
 
+namespace Calcinai\XeroPHP\Generator;
+
 use XeroPHP\Helpers;
 use XeroPHP\Remote\Object;
 use XeroPHP\Remote\Request;
@@ -7,7 +9,12 @@ use XeroPHP\Remote\Request;
 class Model implements ParsedObjectInterface {
 
     private $name;
+
+    /**
+     * @var Property[]
+     */
     private $properties;
+
     private $methods;
     private $url;
 
@@ -37,6 +44,16 @@ class Model implements ParsedObjectInterface {
 
 
     public $rawHTML;
+
+    /**
+     * @var bool
+     */
+    private $supports_page;
+
+    /**
+     * @var array
+     */
+    private $sub_models;
 
     /**
      * No args in constructor.  Most things are not known when it's built
@@ -197,7 +214,7 @@ class Model implements ParsedObjectInterface {
     /**
      * Getter for properties
      *
-     * @return array
+     * @return Property[]
      */
     public function getProperties() {
         return $this->properties;

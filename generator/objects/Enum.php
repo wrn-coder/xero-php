@@ -1,5 +1,9 @@
 <?php
 
+namespace Calcinai\XeroPHP\Generator;
+
+use XeroPHP\Helpers;
+
 class Enum implements ParsedObjectInterface {
 
     private $group;
@@ -50,7 +54,6 @@ class Enum implements ParsedObjectInterface {
      * Remove an the Enum set.  This requires at least a name
      *
      * @param $name
-     * @param $description
      */
     public function removeValue($name){
         unset($this->values[$name]);
@@ -99,11 +102,11 @@ class Enum implements ParsedObjectInterface {
      */
     public function getConstantPrefix(){
         $sane_name = preg_replace('/\([\w\s]+\)/', '', $this->raw_name);
-        return \XeroPHP\Helpers::singularize(preg_replace('/(\b(code)s?)/i', '', trim($sane_name)));
+        return Helpers::singularize(preg_replace('/(\b(code)s?)/i', '', trim($sane_name)));
     }
 
     /**
-     * @param The raw name
+     * @param string $name The raw name
      */
     public function setRawName($name) {
         $this->raw_name = $name;

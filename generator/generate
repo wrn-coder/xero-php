@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+namespace Calcinai\XeroPHP\Generator;
+
 /*
  * This is one big nasty file, not designed to really be maintained, just to speed up the process of building the models
  * for each request.
@@ -10,7 +12,9 @@
  * It was a lot faster than going through each page in the docs.
  */
 
+use Goutte\Client;
 use Symfony\Component\DomCrawler\Crawler;
+use XeroPHP\Remote\ObjectInterface;
 
 define('GEN_ROOT', __DIR__);
 
@@ -112,7 +116,7 @@ $scrape_apis = array(
 
 $apis = array();
 
-$client = new Goutte\Client();
+$client = new Client();
 
 foreach($scrape_apis as $scrape_api) {
     $api = new API($scrape_api['name'], $scrape_api['namespace'], $scrape_api['api_stem_constant']);
@@ -468,10 +472,10 @@ foreach($scrape_apis as $scrape_api) {
     $apis[] = $api;
 }
 
-$loader = new Twig_Loader_Filesystem('generator/templates/');
-$twig = new Twig_Environment($loader, array());
-$twig->addFilter(new Twig_SimpleFilter('wordwrap', 'wordwrap'));
-$twig->addFilter(new Twig_SimpleFilter('addslashes', 'addslashes'));
+$loader = new \Twig_Loader_Filesystem('generator/templates/');
+$twig = new \Twig_Environment($loader, array());
+$twig->addFilter(new \Twig_SimpleFilter('wordwrap', 'wordwrap'));
+$twig->addFilter(new \Twig_SimpleFilter('addslashes', 'addslashes'));
 
 //print_r($apis[0]->getSearchKeys());
 //exit;
@@ -483,7 +487,7 @@ foreach($apis as $api){
         $model_class = sprintf('\\XeroPHP\\Models\\%s', $model->getClassName(true));
         if(class_exists($model_class)){
             $property_position = 0;
-            /** @var XeroPHP\Remote\ObjectInterface $model_class */
+            /** @var ObjectInterface $model_class */
             foreach($model_class::getProperties() as $name => $property_meta){
                 //At this point, it's been removed from the API (and not deprecated).  Thanks Xero!
                 if(!$model->hasProperty($name)){

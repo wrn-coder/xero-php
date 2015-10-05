@@ -1,5 +1,7 @@
 <?php
 
+namespace Calcinai\XeroPHP\Generator;
+
 use XeroPHP\Helpers;
 
 class API {
@@ -191,7 +193,7 @@ class API {
      * Add a key to the search index
      *
      * @param string $key
-     * @param string $object
+     * @param ParsedObjectInterface $object
      */
     public function addSearchKey($key, $object){
 
