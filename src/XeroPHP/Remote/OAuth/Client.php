@@ -29,6 +29,8 @@ class Client {
     const SIGN_LOCATION_QUERY  = 'query_string';
 
     private $config;
+
+    /** @var \XeroPHP\Remote\Request */
     private $request;
 
     /*
