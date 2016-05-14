@@ -87,8 +87,8 @@ class TrackingCategory extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'TrackingCategoryID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TrackingCategoryName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'TrackingCategoryID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TrackingCategoryName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

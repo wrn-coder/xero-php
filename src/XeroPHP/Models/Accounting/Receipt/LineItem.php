@@ -133,14 +133,14 @@ class LineItem extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Description' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UnitAmount' => array (true, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Quantity' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'LineAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Tracking' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false),
-            'DiscountRate' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Description' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'UnitAmount' => array (true, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Quantity' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'LineAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Tracking' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false, false),
+            'DiscountRate' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true)
         );
     }
 

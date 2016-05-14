@@ -109,11 +109,11 @@ class Sale extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'UnitPrice' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'AccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'COGSAccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false)
+            'UnitPrice' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'AccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'COGSAccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false)
         );
     }
 

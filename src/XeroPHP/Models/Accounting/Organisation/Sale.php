@@ -87,8 +87,8 @@ class Sale extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Day' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false)
+            'Day' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false)
         );
     }
 

@@ -99,10 +99,10 @@ class LeavePeriod extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PayPeriodEndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'PayPeriodStartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'LeavePeriodStatus' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false)
+            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PayPeriodEndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'PayPeriodStartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'LeavePeriodStatus' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false)
         );
     }
 

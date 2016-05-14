@@ -123,13 +123,13 @@ class Folder extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FileCount' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Email' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IsInbox' => array (true, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'Id' => array (true, self::PROPERTY_TYPE_GUID, null, false, false),
-            'Files' => array (true, self::PROPERTY_TYPE_OBJECT, 'Files\\File', true, false),
-            'FolderId' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FileCount' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Email' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IsInbox' => array (true, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'Id' => array (true, self::PROPERTY_TYPE_GUID, null, false, false, false),
+            'Files' => array (true, self::PROPERTY_TYPE_OBJECT, 'Files\\File', true, false, false),
+            'FolderId' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

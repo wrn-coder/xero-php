@@ -101,10 +101,10 @@ class SuperFund extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'ABN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'USI' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'ABN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'USI' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

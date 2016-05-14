@@ -129,14 +129,14 @@ class LeaveApplication extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'LeaveApplicationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployeeID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LeaveTypeID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Title' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'EndDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LeavePeriods' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\LeaveApplication\\LeavePeriod', true, false)
+            'LeaveApplicationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmployeeID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LeaveTypeID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Title' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'EndDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LeavePeriods' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\LeaveApplication\\LeavePeriod', true, false, false)
         );
     }
 

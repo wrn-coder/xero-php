@@ -128,14 +128,14 @@ class File extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FolderId' => array (false, self::PROPERTY_TYPE_OBJECT, 'Files\\Folder', false, false),
-            'MimeType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Size' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'User' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Id' => array (false, self::PROPERTY_TYPE_GUID, null, false, false)
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FolderId' => array (false, self::PROPERTY_TYPE_OBJECT, 'Files\\Folder', false, false, false),
+            'MimeType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Size' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'User' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Id' => array (false, self::PROPERTY_TYPE_GUID, null, false, false, false)
         );
     }
 

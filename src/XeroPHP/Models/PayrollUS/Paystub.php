@@ -198,25 +198,25 @@ class Paystub extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PaystubID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PayRunID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastEdited' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Earnings' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'Deductions' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'Tax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Reimbursements' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'NetPay' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\EarningsLine', true, false),
-            'LeaveEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\LeaveEarningsLine', true, false),
-            'TimesheetEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\TimesheetEarningsLine', true, false),
-            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false),
-            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false),
-            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false),
-            'TimeOffLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\TimeOffLine', true, false)
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PaystubID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PayRunID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LastEdited' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Earnings' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, false),
+            'Deductions' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, false),
+            'Tax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Reimbursements' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, false),
+            'NetPay' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\EarningsLine', true, false, false),
+            'LeaveEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\LeaveEarningsLine', true, false, false),
+            'TimesheetEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\TimesheetEarningsLine', true, false, false),
+            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false, false),
+            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false, false),
+            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false, false),
+            'TimeOffLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\TimeOffLine', true, false, false)
         );
     }
 

@@ -95,9 +95,9 @@ class Currency extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'ModifiedAfter' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Code' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'ModifiedAfter' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Code' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

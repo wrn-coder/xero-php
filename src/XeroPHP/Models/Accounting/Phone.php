@@ -104,10 +104,10 @@ class Phone extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'PhoneType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'PhoneNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PhoneAreaCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PhoneCountryCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'PhoneType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'PhoneNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PhoneAreaCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PhoneCountryCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

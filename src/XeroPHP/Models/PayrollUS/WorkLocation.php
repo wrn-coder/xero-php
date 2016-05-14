@@ -125,14 +125,14 @@ class WorkLocation extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'StreetAddress' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'City' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'State' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Latitude' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Longitude' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'WorkLocationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SuitOrAptOrUnit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IsPrimary' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'StreetAddress' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'City' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'State' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Latitude' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Longitude' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'WorkLocationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SuitOrAptOrUnit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IsPrimary' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

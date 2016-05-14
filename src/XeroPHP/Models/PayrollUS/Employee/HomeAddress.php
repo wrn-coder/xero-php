@@ -117,13 +117,13 @@ class HomeAddress extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'StreetAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SuiteOrAptOrUnit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'City' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'State' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Zip' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Lattitude' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Longitude' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'StreetAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SuiteOrAptOrUnit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'City' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'State' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Zip' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Lattitude' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Longitude' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

@@ -99,10 +99,10 @@ class Account extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'AccountID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Code' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'AccountID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Code' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

@@ -206,25 +206,25 @@ class Overpayment extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Contact' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false),
-            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'LineItems' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment\\LineItem', true, false),
-            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'CurrencyCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FullyPaidOnDate' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'OverpaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'RemainingCredit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Allocations' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment\\Allocation', true, true),
-            'Payments' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Payment', true, false),
-            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false)
+            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Contact' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false, false),
+            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'LineItems' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment\\LineItem', true, false, false),
+            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'CurrencyCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FullyPaidOnDate' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'OverpaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'RemainingCredit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Allocations' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment\\Allocation', true, true, false),
+            'Payments' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Payment', true, false, false),
+            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false)
         );
     }
 

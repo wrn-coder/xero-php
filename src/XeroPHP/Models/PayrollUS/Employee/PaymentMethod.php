@@ -91,8 +91,8 @@ class PaymentMethod extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'PaymentMethodType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'BankAccounts' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Employee\\BankAccount', true, false)
+            'PaymentMethodType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'BankAccounts' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Employee\\BankAccount', true, false, false)
         );
     }
 

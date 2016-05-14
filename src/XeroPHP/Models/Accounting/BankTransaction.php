@@ -222,26 +222,26 @@ class BankTransaction extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Type' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Contact' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false),
-            'LineItems' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\BankTransaction\\LineItem', true, false),
-            'BankAccount' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\BankTransaction\\BankAccount', false, false),
-            'IsReconciled' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CurrencyCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Url' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'BankTransactionID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PrepaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'OverpaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false)
+            'Type' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Contact' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false, false),
+            'LineItems' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\BankTransaction\\LineItem', true, false, false),
+            'BankAccount' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\BankTransaction\\BankAccount', false, false, false),
+            'IsReconciled' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CurrencyCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Url' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'BankTransactionID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PrepaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'OverpaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, true),
+            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, true)
         );
     }
 

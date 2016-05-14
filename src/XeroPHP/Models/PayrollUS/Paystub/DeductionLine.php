@@ -99,10 +99,10 @@ class DeductionLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CalculationType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CalculationType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false)
         );
     }
 

@@ -99,10 +99,10 @@ class SuperMembership extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployeeNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SuperMembershipID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmployeeNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SuperMembershipID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

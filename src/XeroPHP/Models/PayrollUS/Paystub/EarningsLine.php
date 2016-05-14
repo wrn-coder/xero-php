@@ -93,9 +93,9 @@ class EarningsLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false)
+            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, false)
         );
     }
 

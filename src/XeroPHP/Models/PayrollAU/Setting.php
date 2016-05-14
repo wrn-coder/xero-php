@@ -97,9 +97,9 @@ class Setting extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Accounts' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Setting\\Account', true, false),
-            'TrackingCategories' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Setting\\TrackingCategory', true, false),
-            'DaysInPayrollYear' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Accounts' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Setting\\Account', true, false, false),
+            'TrackingCategories' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Setting\\TrackingCategory', true, false, false),
+            'DaysInPayrollYear' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

@@ -107,10 +107,10 @@ e.g.
     public static function getProperties()
     {
         return array(
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ContactGroupID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Contacts' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', true, true)
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ContactGroupID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Contacts' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', true, true, false)
         );
     }
 

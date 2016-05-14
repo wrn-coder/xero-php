@@ -155,18 +155,18 @@ class TaxRate extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'TaxComponents' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TaxRate\\TaxComponent', true, false),
-            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'ReportTaxType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'CanApplyToAssets' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'CanApplyToEquity' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'CanApplyToExpenses' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'CanApplyToLiabilities' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'CanApplyToRevenue' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'DisplayTaxRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'EffectiveRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'TaxComponents' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TaxRate\\TaxComponent', true, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'ReportTaxType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'CanApplyToAssets' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'CanApplyToEquity' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'CanApplyToExpenses' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'CanApplyToLiabilities' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'CanApplyToRevenue' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'DisplayTaxRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'EffectiveRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true)
         );
     }
 

@@ -93,9 +93,9 @@ class ReimbursementType extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

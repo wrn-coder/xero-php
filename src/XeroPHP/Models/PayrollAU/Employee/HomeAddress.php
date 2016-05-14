@@ -111,12 +111,12 @@ class HomeAddress extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'AddressLine1' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AddressLine2' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'City' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Region' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'PostalCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Country' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'AddressLine1' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AddressLine2' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'City' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Region' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'PostalCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Country' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

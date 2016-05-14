@@ -115,11 +115,11 @@ class PayrollCalendar extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'PayrollCalendarID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CalendarType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'PaymentDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false)
+            'PayrollCalendarID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CalendarType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'PaymentDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false)
         );
     }
 

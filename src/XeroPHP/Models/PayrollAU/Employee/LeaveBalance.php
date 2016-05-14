@@ -100,10 +100,10 @@ class LeaveBalance extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'LeaveName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LeaveTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TypeOfUnits' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem', true, false)
+            'LeaveName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LeaveTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TypeOfUnits' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem', true, false, false)
         );
     }
 

@@ -112,11 +112,11 @@ class PayItem extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\EarningsType', true, false),
-            'BenefitTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\BenefitType', true, false),
-            'DeductionTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\DeductionType', true, false),
-            'ReimbursementTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\ReimbursementType', true, false),
-            'TimeOffTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\TimeOffType', true, false)
+            'EarningsTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\EarningsType', true, false, false),
+            'BenefitTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\BenefitType', true, false, false),
+            'DeductionTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\DeductionType', true, false, false),
+            'ReimbursementTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\ReimbursementType', true, false, false),
+            'TimeOffTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\TimeOffType', true, false, false)
         );
     }
 

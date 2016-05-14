@@ -87,8 +87,8 @@ class WorkLocation extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'WorkLocationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IsPrimary' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false)
+            'WorkLocationID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IsPrimary' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false)
         );
     }
 

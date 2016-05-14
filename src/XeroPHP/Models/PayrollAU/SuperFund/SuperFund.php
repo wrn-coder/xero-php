@@ -142,16 +142,16 @@ class SuperFund extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ABN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'BSB' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ElectronicServiceAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployerNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SPIN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Type' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ABN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'BSB' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ElectronicServiceAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SuperFundID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmployerNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SPIN' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

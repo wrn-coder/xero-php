@@ -114,12 +114,12 @@ class JournalLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'LineAmount' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'Tracking' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false),
-            'TaxAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'LineAmount' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'Tracking' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false, false),
+            'TaxAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true)
         );
     }
 

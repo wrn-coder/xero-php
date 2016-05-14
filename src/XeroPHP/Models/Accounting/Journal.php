@@ -150,14 +150,14 @@ class Journal extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'JournalID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'JournalDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'JournalNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SourceID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SourceType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'JournalLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Journal\\JournalLine', true, false)
+            'JournalID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'JournalDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'JournalNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SourceID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SourceType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'JournalLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Journal\\JournalLine', true, false, false)
         );
     }
 

@@ -177,21 +177,21 @@ class Receipt extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Date' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'Contact' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false),
-            'LineItems' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Receipt\\LineItem', true, false),
-            'User' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\User', false, false),
-            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'ReceiptID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ReceiptNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'Url' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Date' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'Contact' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Contact', false, false, false),
+            'LineItems' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Receipt\\LineItem', true, false, false),
+            'User' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\User', false, false, false),
+            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LineAmountTypes' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'ReceiptID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'ReceiptNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, true),
+            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, true),
+            'Url' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true)
         );
     }
 

@@ -93,9 +93,9 @@ class TimesheetEarningsLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsRateID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'EarningsRateID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false)
         );
     }
 

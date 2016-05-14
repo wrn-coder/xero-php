@@ -93,9 +93,9 @@ class TrackingOption extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'TrackingOptionID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'TrackingOptionID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

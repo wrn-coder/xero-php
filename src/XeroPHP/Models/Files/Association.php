@@ -98,9 +98,9 @@ class Association extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'ObjectId' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ObjectGroup' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ObjectType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false)
+            'ObjectId' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ObjectGroup' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ObjectType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false)
         );
     }
 

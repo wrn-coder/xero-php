@@ -118,13 +118,13 @@ class User extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'UserID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmailAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'IsSubscriber' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'OrganisationRole' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false)
+            'UserID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmailAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false),
+            'IsSubscriber' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'OrganisationRole' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false)
         );
     }
 

@@ -99,10 +99,10 @@ class ContactPerson extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmailAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IncludeInEmails' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false)
+            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmailAddress' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IncludeInEmails' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false)
         );
     }
 

@@ -182,20 +182,20 @@ class Payment extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Invoice' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Invoice', false, false),
-            'CreditNote' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\CreditNote', false, false),
-            'Prepayment' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Prepayment', false, false),
-            'Overpayment' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment', false, false),
-            'Account' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Account', false, false),
-            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IsReconciled' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'PaymentType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'PaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Invoice' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Invoice', false, false, false),
+            'CreditNote' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\CreditNote', false, false, false),
+            'Prepayment' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Prepayment', false, false, false),
+            'Overpayment' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Overpayment', false, false, false),
+            'Account' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Account', false, false, false),
+            'Date' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'CurrencyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IsReconciled' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'PaymentType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, true),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, true),
+            'PaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

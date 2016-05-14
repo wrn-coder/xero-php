@@ -93,9 +93,9 @@ class TimeOffLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'TimeOffTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Hours' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Balance' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'TimeOffTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Hours' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Balance' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

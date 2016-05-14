@@ -140,16 +140,16 @@ class OpeningBalance extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\EarningsLine', true, false),
-            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false),
-            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false),
-            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false),
-            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\EarningsLine', true, false, false),
+            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false, false),
+            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false, false),
+            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false, false),
+            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

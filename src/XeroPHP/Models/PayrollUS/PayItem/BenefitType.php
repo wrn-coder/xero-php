@@ -145,15 +145,15 @@ class BenefitType extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'BenefitType' => array (true, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\BenefitType', false, false),
-            'BenefitCategory' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'LiabilityAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ExpenseAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'StandardAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'CompanyMax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ShowBalanceOnPaystub' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'BenefitType' => array (true, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\BenefitType', false, false, false),
+            'BenefitCategory' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'LiabilityAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ExpenseAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'StandardAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'CompanyMax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ShowBalanceOnPaystub' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false)
         );
     }
 

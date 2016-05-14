@@ -107,11 +107,11 @@ class DeductionType extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ReducesTax' => array (true, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'ReducesSuper' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ReducesTax' => array (true, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'ReducesSuper' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

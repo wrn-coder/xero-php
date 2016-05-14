@@ -205,26 +205,26 @@ class Payslip extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PayslipID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\EarningsLine', true, false),
-            'TimesheetEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\TimesheetEarningsLine', true, false),
-            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\DeductionLine', true, false),
-            'LeaveAccrualLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\LeaveAccrualLine', true, false),
-            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\ReimbursementLine', true, false),
-            'SuperannuationLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\SuperannuationLine', true, false),
-            'TaxLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\TaxLine', true, false),
-            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EmployeeGroup' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastEdited' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Wages' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'Deductions' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'NetPay' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Tax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Super' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Reimbursements' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'LeaveEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\LeaveEarningsLine', true, false)
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PayslipID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\EarningsLine', true, false, false),
+            'TimesheetEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\TimesheetEarningsLine', true, false, false),
+            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\DeductionLine', true, false, false),
+            'LeaveAccrualLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\LeaveAccrualLine', true, false, false),
+            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\ReimbursementLine', true, false, false),
+            'SuperannuationLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\SuperannuationLine', true, false, false),
+            'TaxLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\TaxLine', true, false, false),
+            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'EmployeeGroup' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'LastEdited' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'Wages' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'Deductions' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'NetPay' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'Tax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'Super' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'Reimbursements' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, true),
+            'LeaveEarningsLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\Payslip\\LeaveEarningsLine', true, false, true)
         );
     }
 

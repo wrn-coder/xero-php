@@ -106,11 +106,11 @@ class TimeOffBalance extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'TimeOffName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TimeOffTypeId' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem', false, false),
-            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TypeOfUnits' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem', true, false),
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'TimeOffName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TimeOffTypeId' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem', false, false, false),
+            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TypeOfUnits' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem', true, false, false),
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

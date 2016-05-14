@@ -112,11 +112,11 @@ The description of the link is auto-generated in the form “Go to <App name>”
     public static function getProperties()
     {
         return array(
-            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ExternalLink' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\ExternalLink', false, false)
+            'EmployeeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'FirstName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LastName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ExternalLink' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\ExternalLink', false, false, false)
         );
     }
 

@@ -116,12 +116,12 @@ If Paid Time Off is selected the employee will get paid when taking this time of
     public static function getProperties()
     {
         return array(
-            'TimeOffType' => array (true, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\TimeOffType', false, false),
-            'TimeOffCategory' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'ExpenseAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'LiabilityAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TimeOffTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ShowBalanceToEmployee' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'TimeOffType' => array (true, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\PayItem\\TimeOffType', false, false, false),
+            'TimeOffCategory' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'ExpenseAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'LiabilityAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TimeOffTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ShowBalanceToEmployee' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

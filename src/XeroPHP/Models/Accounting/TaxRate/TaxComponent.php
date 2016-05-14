@@ -93,9 +93,9 @@ class TaxComponent extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Rate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'IsCompound' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Rate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'IsCompound' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false)
         );
     }
 

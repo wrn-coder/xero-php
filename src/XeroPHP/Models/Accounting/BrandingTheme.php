@@ -100,10 +100,10 @@ class BrandingTheme extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'BrandingThemeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SortOrder' => array (false, self::PROPERTY_TYPE_INT, null, false, false),
-            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false)
+            'BrandingThemeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SortOrder' => array (false, self::PROPERTY_TYPE_INT, null, false, false, false),
+            'CreatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false)
         );
     }
 

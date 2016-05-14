@@ -94,9 +94,9 @@ class TimesheetLine extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsRateID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TrackingItemID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'EarningsRateID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'TrackingItemID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'NumberOfUnits' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

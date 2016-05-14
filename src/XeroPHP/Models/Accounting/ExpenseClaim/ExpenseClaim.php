@@ -136,16 +136,16 @@ class ExpenseClaim extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'ExpenseClaimID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Payments' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Payment', true, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'AmountDue' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'AmountPaid' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'PaymentDueDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'ReportingDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'ReceiptID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false)
+            'ExpenseClaimID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Payments' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Payment', true, false, true),
+            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, true),
+            'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'AmountDue' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'AmountPaid' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, true),
+            'PaymentDueDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, true),
+            'ReportingDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, true),
+            'ReceiptID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

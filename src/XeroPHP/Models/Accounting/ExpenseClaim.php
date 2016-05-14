@@ -100,9 +100,9 @@ class ExpenseClaim extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'ExpenseClaimID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'User' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\User', false, false),
-            'Receipts' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Receipt', true, false)
+            'ExpenseClaimID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'User' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\User', false, false, false),
+            'Receipts' => array (true, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Receipt', true, false, false)
         );
     }
 

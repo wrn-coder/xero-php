@@ -175,21 +175,21 @@ class PayTemplate extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsLines' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
-            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false),
-            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false),
-            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false),
-            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UnitsOrHours' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'CalculationType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'EmployeeMax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'EarningsLines' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false, false),
+            'DeductionLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\DeductionLine', true, false, false),
+            'ReimbursementLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\ReimbursementLine', true, false, false),
+            'BenefitLines' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollUS\\Paystub\\BenefitLine', true, false, false),
+            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'UnitsOrHours' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'RatePerUnit' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'DeductionTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'CalculationType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'EmployeeMax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Percentage' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'ReimbursementTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'BenefitTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

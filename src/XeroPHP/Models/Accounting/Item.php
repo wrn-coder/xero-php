@@ -171,20 +171,20 @@ class Item extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'ItemID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Code' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'InventoryAssetAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'IsSold' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'IsPurchased' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PurchaseDescription' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PurchaseDetails' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Item\\Purchase', true, false),
-            'SalesDetails' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Item\\Sale', true, false),
-            'IsTrackedAsInventory' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
-            'TotalCostPool' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'QuantityOnHand' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false)
+            'ItemID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Code' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'InventoryAssetAccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'IsSold' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'IsPurchased' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PurchaseDescription' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PurchaseDetails' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Item\\Purchase', true, false, false),
+            'SalesDetails' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Item\\Sale', true, false, false),
+            'IsTrackedAsInventory' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false, false),
+            'TotalCostPool' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'QuantityOnHand' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, false)
         );
     }
 

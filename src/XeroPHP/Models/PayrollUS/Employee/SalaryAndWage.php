@@ -124,14 +124,14 @@ class SalaryAndWage extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'SalaryAndWageID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SalaryAndWagesID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'SalaryWagesType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'HourlyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'AnnualSalary' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'StandardHoursPerWeek' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'EffectiveDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false)
+            'SalaryAndWageID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SalaryAndWagesID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EarningsTypeID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'SalaryWagesType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'HourlyRate' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'AnnualSalary' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'StandardHoursPerWeek' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'EffectiveDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false)
         );
     }
 

@@ -105,10 +105,10 @@ class PayItem extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'EarningsRates' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\EarningsRate', true, false),
-            'DeductionTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\DeductionType', true, false),
-            'LeaveTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\LeaveType', true, false),
-            'ReimbursementTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\ReimbursementType', true, false)
+            'EarningsRates' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\EarningsRate', true, false, false),
+            'DeductionTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\DeductionType', true, false, false),
+            'LeaveTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\LeaveType', true, false, false),
+            'ReimbursementTypes' => array (false, self::PROPERTY_TYPE_OBJECT, 'PayrollAU\\PayItem\\ReimbursementType', true, false, false)
         );
     }
 

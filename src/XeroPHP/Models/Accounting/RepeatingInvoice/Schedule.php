@@ -118,13 +118,13 @@ class Schedule extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Period' => array (false, self::PROPERTY_TYPE_INT, null, false, false),
-            'Unit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'DueDate' => array (false, self::PROPERTY_TYPE_INT, null, false, false),
-            'DueDateType' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\PaymentTerm', false, false),
-            'StartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'NextScheduledDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'EndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false)
+            'Period' => array (false, self::PROPERTY_TYPE_INT, null, false, false, false),
+            'Unit' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'DueDate' => array (false, self::PROPERTY_TYPE_INT, null, false, false, false),
+            'DueDateType' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\PaymentTerm', false, false, false),
+            'StartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'NextScheduledDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'EndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false)
         );
     }
 

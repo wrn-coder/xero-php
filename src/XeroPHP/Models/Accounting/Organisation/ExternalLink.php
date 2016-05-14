@@ -93,8 +93,8 @@ class ExternalLink extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'LinkType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'URL' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'LinkType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'URL' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

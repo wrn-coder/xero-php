@@ -149,18 +149,18 @@ class PayRun extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'PayScheduleID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PayRunPeriodEndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'PayRunStatus' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'PayRunID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PayRunPeriodStartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'PaymentDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'Earnings' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Deductions' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Reimbursement' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'NetPay' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'UpdateDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false),
-            'PayStubs' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'PayScheduleID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PayRunPeriodEndDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'PayRunStatus' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'PayRunID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PayRunPeriodStartDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, true),
+            'PaymentDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, true),
+            'Earnings' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'Deductions' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'Reimbursement' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'NetPay' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true),
+            'UpdateDateUTC' => array (false, self::PROPERTY_TYPE_TIMESTAMP, '\\DateTimeInterface', false, false, true),
+            'PayStubs' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, true)
         );
     }
 

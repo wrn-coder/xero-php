@@ -87,8 +87,8 @@ class PaymentTerm extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'Bills' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\Bill', true, false),
-            'Sales' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\Sale', true, false)
+            'Bills' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\Bill', true, false, false),
+            'Sales' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Organisation\\Sale', true, false, false)
         );
     }
 

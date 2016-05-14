@@ -118,13 +118,13 @@ class BankAccount extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'AccountHolderName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'StatementText' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'RoutingNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Remainder' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
+            'AccountHolderName' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'StatementText' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'RoutingNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'AccountNumber' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false, false),
+            'Remainder' => array (false, self::PROPERTY_TYPE_STRING, null, false, false, false)
         );
     }
 

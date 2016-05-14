@@ -107,11 +107,11 @@ class PaySchedule extends Remote\Object
     public static function getProperties()
     {
         return array(
-            'PayScheduleName' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'PaymentDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false),
-            'ScheduleType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
-            'PayScheduleId' => array (false, self::PROPERTY_TYPE_GUID, null, false, false)
+            'PayScheduleName' => array (true, self::PROPERTY_TYPE_STRING, null, false, false, false),
+            'PaymentDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'StartDate' => array (true, self::PROPERTY_TYPE_DATE, '\\DateTimeInterface', false, false, false),
+            'ScheduleType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false, false),
+            'PayScheduleId' => array (false, self::PROPERTY_TYPE_GUID, null, false, false, false)
         );
     }
 
