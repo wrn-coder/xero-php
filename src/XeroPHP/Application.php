@@ -192,7 +192,7 @@ abstract class Application {
             }
 
             //Put in an array with the first level containing only the 'root node'.
-            $data = array($object::getRootNodeName() => $object->toStringArray());
+            $data = array($object::getRootNodeName() => $object->toStringArray(false));
             $url = new URL($this, $uri);
             $request = new Request($this, $url, $method);
 

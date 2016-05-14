@@ -22,6 +22,7 @@ abstract class Object implements ObjectInterface, \JsonSerializable, \ArrayAcces
     const KEY_PHP_TYPE       = 2;
     const KEY_IS_ARRAY       = 3;
     const KEY_SAVE_DIRECTLY  = 4;
+    const KEY_READ_ONLY      = 5;
 
     /**
      *
@@ -202,12 +203,17 @@ abstract class Object implements ObjectInterface, \JsonSerializable, \ArrayAcces
      *
      * @return array
      */
-    public function toStringArray() {
+    public function toStringArray($get_read_only = true) {
         $out = array();
         foreach(static::getProperties() as $property => $meta) {
 
-            if(!isset($this->_data[$property]))
+            if($meta[self::KEY_READ_ONLY] && !$get_read_only){
                 continue;
+            }
+
+            if(!isset($this->_data[$property])){
+                continue;
+            }
 
             $type = $meta[self::KEY_TYPE];
 
